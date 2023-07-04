@@ -2,7 +2,10 @@
   <table align>
     <tr>
       <div class="serch_form">
-        <%= form
+        <%= form_with url: tagsearches_search_path,method: :get, local: true do |f| %>
+         <td><%= f.text_field :content %></td>
+      <td><%= f.submit'タグ検索' %></td>
+      <% end %>
       </div>
     </tr>
   </table>
